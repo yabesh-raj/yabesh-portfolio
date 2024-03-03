@@ -67,7 +67,7 @@ function Hero() {
                   >
                     <i className="fa-brands fa-github"></i>
                   </a>
-                  <a href={Resume} download={Resume}>
+                  <a href={Resume}download>
                     <i className="fa-solid fa-file"></i>
                   </a>
                 </span>

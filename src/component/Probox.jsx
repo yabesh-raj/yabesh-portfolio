@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import eye from "../images/eye.svg"
 function ProBox({
   title,
   img,
@@ -46,6 +46,7 @@ function ProBox({
             </a>
             <a target="_blank" href={Insights} rel="noreferrer">
               Insights
+              <i class="fa-solid fa-eye"></i>
             </a>
             <a target="_blank" href={Dashboard} rel="noreferrer">
               Dashboard
