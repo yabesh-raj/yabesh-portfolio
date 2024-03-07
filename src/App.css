@@ -15,6 +15,41 @@ body {
   position: relative;
 }
 
+.btn-insights {
+  cursor: pointer;
+}
+
+.insights-overlay {
+  display: none;
+  position:fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+}
+
+.insights-overlay.visible {
+  display: flex;
+}
+
+.insights-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
 .container {
   max-width: 107rem;
   margin: 0 auto;
@@ -64,10 +99,12 @@ body {
   cursor: pointer;
   display: none;
 }
+
 .mobile-menu:hover {
   color: #147efb;
   transition: all 0.3s;
 }
+
 @media (max-width: 900px) {
   .mobile-menu {
     display: flex;
@@ -96,6 +133,7 @@ body {
   justify-content: center;
   transition: all 0.3s ease-in-out;
 }
+
 .mobile-nav span {
   font-size: 3.3rem;
   position: absolute;
@@ -103,10 +141,12 @@ body {
   right: 4rem;
   cursor: pointer;
 }
+
 .mobile-nav span:hover {
   color: #147efb;
   transition: all 0.3s;
 }
+
 .mobile-nav ul {
   display: flex;
   flex-direction: column;
@@ -114,11 +154,13 @@ body {
   font-size: 2.3rem;
   list-style: none;
 }
+
 .mobile-nav ul a {
   color: black;
   text-decoration: none;
   font-weight: 500;
 }
+
 .mobile-nav ul a:hover {
   color: #147efb;
   transition: all 0.3s;
@@ -139,27 +181,32 @@ nav {
   z-index: 200;
   align-items: center;
 }
+
 @media (max-width: 400px) {
   nav {
     padding: 25px 30px 25px 30px;
   }
 }
+
 nav ul {
   display: flex;
   list-style: none;
   gap: 2rem;
 }
+
 nav ul a {
   color: #2d2e32;
   text-decoration: none;
   transition: all 0.23s;
   font-weight: 600;
 }
+
 @media (max-width: 900px) {
   nav ul a {
     display: none;
   }
 }
+
 nav ul a:hover {
   color: #147efb;
 }
@@ -177,6 +224,7 @@ nav ul a:hover {
   background-color: #f9f9f9;
   position: relative;
 }
+
 @media (max-width: 900px) {
   .hero {
     height: auto;
@@ -191,6 +239,7 @@ nav ul a:hover {
   gap: 10rem;
   position: relative;
 }
+
 @media (max-width: 900px) {
   .hero-main {
     flex-direction: column-reverse;
@@ -208,6 +257,7 @@ nav ul a:hover {
   gap: 10rem;
   position: relative;
 }
+
 @media (max-width: 900px) {
   .content {
     flex-direction: column;
@@ -216,11 +266,13 @@ nav ul a:hover {
     gap: 3rem;
   }
 }
+
 @media (min-width: 1600px) {
   .content {
     margin-top: 6rem;
   }
 }
+
 @media (min-width: 1900px) {
   .content {
     margin-top: 10rem;
@@ -233,6 +285,7 @@ nav ul a:hover {
   max-width: 50rem;
   position: relative;
 }
+
 .hero-text h1 {
   font-size: 5.5rem;
   line-height: 1.2;
@@ -240,11 +293,13 @@ nav ul a:hover {
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
+
 @media (max-width: 500px) {
   .hero-text h1 {
     font-size: 4rem;
   }
 }
+
 .hero-text p {
   font-size: 1.8rem;
   font-weight: 500;
@@ -252,21 +307,25 @@ nav ul a:hover {
   font-family: "Mulish", sans-serif;
   line-height: 1.6;
 }
+
 @media (max-width: 900px) {
   .hero-text p {
     margin-bottom: 5rem;
   }
 }
+
 .hero-text span {
   display: flex;
   gap: 1.3rem;
   margin: 2.5rem 0;
   cursor: pointer;
 }
+
 .hero-text span a {
   font-size: 3rem;
   color: #2d2e32;
 }
+
 @media (max-width: 900px) {
   .hero-text span {
     justify-content: center;
@@ -275,12 +334,15 @@ nav ul a:hover {
     gap: 1.6rem;
   }
 }
+
 .hero-text span i {
   transition: all 0.2s;
 }
+
 .hero-text span i:hover {
   color: #147efb;
 }
+
 .hero-text img {
   position: absolute;
   width: 6rem;
@@ -288,11 +350,13 @@ nav ul a:hover {
   top: 8.7rem;
   right: 13rem;
 }
+
 @media (max-width: 900px) {
   .hero-text img {
     right: 3rem;
   }
 }
+
 @media (max-width: 500px) {
   .hero-text img {
     top: 6.4rem;
@@ -301,16 +365,19 @@ nav ul a:hover {
     height: 4.5rem;
   }
 }
+
 @media (max-width: 400px) {
   .hero-text img {
     right: 3rem;
   }
 }
+
 @media (max-width: 380px) {
   .hero-text img {
     right: 3rem;
   }
 }
+
 @media (max-width: 375px) {
   .hero-text img {
     right: 1.7rem;
@@ -330,19 +397,23 @@ nav ul a:hover {
   position: relative;
   transition: all 1s ease-in-out;
 }
+
 @media (max-width: 500px) {
   .hero-img {
     width: 28rem;
     height: 28rem;
   }
 }
+
 @keyframes morph {
   0% {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
+
   50% {
     border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
   }
+
   100% {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
@@ -357,6 +428,7 @@ nav ul a:hover {
   bottom: 0;
   left: 0;
 }
+
 @media (max-width: 900px) {
   .skills {
     position: initial;
@@ -372,6 +444,7 @@ nav ul a:hover {
   font-weight: 600;
   color: #2d2e32;
 }
+
 @media (max-width: 900px) {
   .skills p {
     margin-right: 0;
@@ -382,17 +455,20 @@ nav ul a:hover {
     padding-bottom: 1rem;
   }
 }
+
 .skills ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem;
 }
+
 @media (max-width: 900px) {
   .skills ul {
     justify-content: center;
   }
 }
+
 .skills ul li {
   width: 6.5rem;
   height: 6.5rem;
@@ -404,6 +480,7 @@ nav ul a:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
   cursor: pointer;
 }
+
 .skills ul li img {
   width: 3.4rem;
   height: 3.4rem;
@@ -417,6 +494,7 @@ nav ul a:hover {
   background-color: white;
   padding: 15rem 0;
 }
+
 @media (max-width: 1020px) {
   .about {
     padding: 8rem 0;
@@ -429,6 +507,7 @@ nav ul a:hover {
   justify-content: center;
   align-items: center;
 }
+
 @media (max-width: 1020px) {
   .about-content {
     grid-template-columns: 1fr;
@@ -439,21 +518,25 @@ nav ul a:hover {
 .text-side {
   padding-right: 1.5rem;
 }
+
 @media (max-width: 1020px) {
   .text-side {
     max-width: 54rem;
     margin: 0 auto;
   }
 }
+
 @media (max-width: 400px) {
   .text-side {
     padding-right: 0;
   }
 }
+
 .text-side span {
   -webkit-text-decoration: underline #147efb;
   text-decoration: underline #147efb;
 }
+
 .text-side h3 {
   font-size: 1.7rem;
   color: #147efb;
@@ -461,6 +544,7 @@ nav ul a:hover {
   font-weight: 700;
   margin-bottom: 1rem;
 }
+
 .text-side h4 {
   font-size: 2.5rem;
   font-family: "Poppins", sans-serif;
@@ -468,6 +552,7 @@ nav ul a:hover {
   margin-bottom: 2rem;
   color: #2d2e32;
 }
+
 .text-side p {
   font-size: 1.7rem;
   font-family: "Mulish", sans-serif;
@@ -479,6 +564,7 @@ nav ul a:hover {
 .img-side {
   position: relative;
 }
+
 .img-side span {
   width: 19rem;
   height: 19rem;
@@ -488,6 +574,7 @@ nav ul a:hover {
   right: 33px;
   border-radius: 50%;
 }
+
 @media (max-width: 1020px) {
   .img-side span {
     width: 17rem;
@@ -496,41 +583,49 @@ nav ul a:hover {
     right: 190px;
   }
 }
+
 @media (max-width: 880px) {
   .img-side span {
     bottom: -3px;
     right: 100px;
   }
 }
+
 @media (max-width: 750px) {
   .img-side span {
     display: none;
   }
 }
+
 .img-side span img {
   width: 19rem;
   animation: rotate 9s linear infinite;
 }
+
 @media (max-width: 1020px) {
   .img-side span img {
     width: 17rem;
   }
 }
+
 @keyframes rotate {
   to {
     transform: rotate(360deg);
   }
 }
+
 .img-side__main-img {
   width: 41rem;
   height: 35rem;
   border-radius: 1.7rem;
 }
+
 @media (max-width: 1020px) {
   .img-side__main-img {
     margin-bottom: 3.5rem;
   }
 }
+
 @media (max-width: 460px) {
   .img-side__main-img {
     width: 90%;
@@ -545,18 +640,21 @@ nav ul a:hover {
   bottom: 35px;
   right: 98px;
 }
+
 @media (max-width: 1020px) {
   .work-emoji {
     bottom: 25px;
     right: 245px;
   }
 }
+
 @media (max-width: 880px) {
   .work-emoji {
     bottom: 57px;
     right: 156px;
   }
 }
+
 @media (max-width: 750px) {
   .work-emoji {
     display: none;
@@ -567,6 +665,7 @@ nav ul a:hover {
   background-color: #f9f9f9;
   padding: 15rem 0;
 }
+
 @media (max-width: 1020px) {
   .project {
     padding: 8rem 0;
@@ -577,11 +676,13 @@ nav ul a:hover {
   display: flex;
   flex-direction: column;
 }
+
 @media (max-width: 600px) {
   .project-content {
     text-align: center;
   }
 }
+
 .project-content p {
   color: #147efb;
   font-size: 1.7rem;
@@ -589,6 +690,7 @@ nav ul a:hover {
   font-weight: 700;
   margin-bottom: 1rem;
 }
+
 .project-content h3 {
   font-size: 2.5rem;
   color: #2d2e32;
@@ -603,18 +705,21 @@ nav ul a:hover {
   height: auto;
   gap: 5rem;
 }
+
 .projects-grid .pro {
   display: flex;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 1.7rem;
 }
+
 .projects-grid .pro__1 {
   height: 40rem;
   flex-direction: row;
   padding: 2rem;
   gap: 8rem;
 }
+
 @media (max-width: 1020px) {
   .projects-grid .pro__1 {
     height: 75rem;
@@ -625,11 +730,13 @@ nav ul a:hover {
     margin: 0 auto;
   }
 }
+
 @media (max-width: 400px) {
   .projects-grid .pro__1 {
     width: 100%;
   }
 }
+
 .projects-grid .pro__img {
   width: 53rem;
   height: auto;
@@ -638,15 +745,18 @@ nav ul a:hover {
   overflow: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 @media (max-width: 650px) {
   .projects-grid .pro__img {
     width: 100%;
   }
 }
+
 .projects-grid .pro__img img {
   width: 100%;
   height: auto;
 }
+
 .projects-grid .pro__text {
   display: flex;
   width: 30rem;
@@ -655,22 +765,26 @@ nav ul a:hover {
   text-align: center;
   justify-content: center;
 }
+
 @media (max-width: 1020px) {
   .projects-grid .pro__text {
     margin: 0 auto;
   }
 }
+
 @media (max-width: 400px) {
   .projects-grid .pro__text {
     width: 100%;
   }
 }
+
 .projects-grid .pro__text img {
   width: 7rem;
   position: absolute;
   top: -2px;
   right: -19px;
 }
+
 .projects-grid .pro__text h3 {
   font-size: 1.7rem;
   text-transform: uppercase;
@@ -678,6 +792,7 @@ nav ul a:hover {
   margin-bottom: 2rem;
   position: relative;
 }
+
 .projects-grid .pro__text p {
   font-size: 1.7rem;
   color: #767676;
@@ -692,6 +807,7 @@ nav ul a:hover {
   justify-content: center;
   margin-top: 1rem;
 }
+
 .stack p {
   color: black !important;
   font-weight: 600 !important;
@@ -708,6 +824,7 @@ nav ul a:hover {
   gap: 1rem;
   align-items: center;
 }
+
 .links a {
   font-size: 1.7rem;
   color: #2d2e32;
@@ -717,15 +834,19 @@ nav ul a:hover {
   align-items: center;
   gap: 5px;
 }
+
 .links a i {
   font-size: 2.8rem;
 }
+
 .links a .link-icon {
   font-size: 2rem !important;
 }
+
 .links a img {
   width: 3.5rem;
 }
+
 .links a:hover {
   color: #147efb;
   transition: all 0.3s;
@@ -745,20 +866,24 @@ nav ul a:hover {
   background-color: white;
   padding: 11rem 0;
 }
+
 @media (max-width: 1020px) {
   .contact {
     padding: 8rem 0;
   }
 }
+
 .contact__content {
   display: flex;
   flex-direction: column;
 }
+
 @media (max-width: 750px) {
   .contact__title {
     text-align: center;
   }
 }
+
 .contact__title p {
   color: #147efb;
   text-transform: uppercase;
@@ -766,16 +891,19 @@ nav ul a:hover {
   font-size: 1.7rem;
   margin-bottom: 1rem;
 }
+
 .contact__title h3 {
   color: #2d2e32;
   font-size: 2.5rem;
 }
+
 .contact__icons {
   display: flex;
   gap: 8rem;
   flex-wrap: wrap;
   margin-top: 6rem;
 }
+
 @media (max-width: 750px) {
   .contact__icons {
     flex-direction: column;
@@ -784,35 +912,42 @@ nav ul a:hover {
     text-align: center;
   }
 }
+
 .contact__icon-box {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
+
 @media (max-width: 750px) {
   .contact__icon-box {
     flex-direction: column;
   }
 }
+
 .contact__icon-box span {
   background-color: white;
   padding: 2.3rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
+
 .contact__icon-box span i {
   font-size: 3rem;
   color: #147efb;
 }
+
 .contact__info {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
+
 .contact__info h3 {
   font-size: 1.7rem;
   color: #2d2e32;
 }
+
 .contact__info a,
 .contact__info p {
   font-size: 1.7rem;
@@ -820,6 +955,7 @@ nav ul a:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
 .contact__info a:hover,
 .contact__info p:hover {
   color: #147efb;
@@ -831,6 +967,7 @@ footer {
   padding: 5rem 0;
   width: 100%;
 }
+
 footer h3 {
   font-size: 1.7rem;
   color: white;
@@ -841,6 +978,7 @@ footer h3 {
   justify-content: space-between;
   align-items: center;
 }
+
 @media (max-width: 550px) {
   .footerc {
     flex-wrap: wrap;
@@ -849,14 +987,17 @@ footer h3 {
     text-align: center;
   }
 }
+
 .footerc__socials {
   display: flex;
   gap: 2rem;
 }
+
 .footerc__socials i {
   font-size: 2.3rem;
   color: white;
 }
+
 .footerc__socials i:hover {
   transform: scale(1.2);
   transition: all 0.2s ease-in-out;
